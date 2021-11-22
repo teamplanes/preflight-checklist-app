@@ -85,9 +85,7 @@ const Home: NextPage = () => {
           </Flex>
           <AddTaskField />
           <Divider my={4} />
-          {INITIAL_TASKS.map((task) => (
-            <TaskListItem title={task.title} key={task.id} />
-          ))}
+          <TaskListItem title={INITIAL_TASKS[0].title} />
         </Container>
       </Flex>
     </>
