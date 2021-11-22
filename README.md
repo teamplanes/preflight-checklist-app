@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Planes Preflight Checklist App
 
-## Getting Started
+👋🏼 welcome, this Git repository holds the boilerplate used for the Planes
+engineering challenge.
 
-First, run the development server:
+During the hour-long challenge you'll be pair programming with a member of the
+Planes engineering team, both collaborating to develop the project into a
+working app! We ask the candidate to "drive" (sharing your screen) and your
+paired engineer is there to guide your through the features.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Prep Work
+**Sometime before the call please run through the following steps**, just so we
+can be sure to get the most from the session.
+- Clone the repo
+- `cd` and `yarn/npm install`
+- Make sure the project runs in your browser by running `npm run dev` and
+  visiting the URL output by the Next.js CLI
+- [optional] It'd be great to make sure you have `eslint` in VScode (or similar)
+  just to make sure you are keeping inline with our coding standards, but you
+  won't be marked down if you don't have this setup!
+- Disable GitHub Copilot, if you have it installed
+- Have a look at the code but try not to make any changes
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What to Expect
+- Your paired engineer will be talking you through features or updates that we
+  want to make to this project, they'll start easy and get slightly more
+  advanced throughout the session
+- Google-ing is fine! It's part of our job, however please share your entire
+  screen on the call
+- Asking your pair questions about the code or feature is encouraged, they
+  aren't there to watch you code, they are there to collaborate
+- No need to push/host your code after the call
+- You won't be doing any actual UI/CSS/Styling, it'll mostly be logic based (so
+  think hooks, props, map, etc).
+- We will be working with TypeScript but if you've not worked with it before no
+  problem at all you'll be guided through the syntax
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+✈️ / [planes.studio](https://planes.studio)

@@ -1,3 +1,6 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "eslint-config-planes",
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }
