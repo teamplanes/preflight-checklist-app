@@ -1,5 +1,5 @@
-import type {NextPage} from 'next';
 import Head from 'next/head';
+import * as PropTypes from 'prop-types';
 import {
   Button,
   ButtonGroup,
@@ -22,11 +22,7 @@ const INITIAL_TASKS = Array.from({length: 10}, () => ({
   done: datatype.boolean(),
 }));
 
-interface TaskListItemProps {
-  title: string;
-}
-
-const TaskListItem: React.FC<TaskListItemProps> = (props) => {
+const TaskListItem = (props) => {
   return (
     <Flex
       direction="row"
@@ -38,8 +34,9 @@ const TaskListItem: React.FC<TaskListItemProps> = (props) => {
       <Flex flex={1}>{props.title}</Flex>
       <ButtonGroup size="sm" isAttached variant="outline">
         <IconButton
+          variant="solid"
           mr="-px"
-          colorScheme="primary"
+          colorScheme="green"
           aria-label="Mark as Done"
           icon={<CheckIcon />}
         />
@@ -49,15 +46,15 @@ const TaskListItem: React.FC<TaskListItemProps> = (props) => {
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface AddTaskFieldProps {
-  // TODO
-}
+TaskListItem.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
-const AddTaskField: React.FC<AddTaskFieldProps> = () => {
-  const handleSubmit: React.FormEventHandler<HTMLDivElement> = (e) => {
+const AddTaskField = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   };
+
   return (
     <Flex as="form" onSubmit={handleSubmit} layerStyle="card">
       <InputGroup size="md">
@@ -72,7 +69,9 @@ const AddTaskField: React.FC<AddTaskFieldProps> = () => {
   );
 };
 
-const Home: NextPage = () => {
+AddTaskField.propTypes = {};
+
+const Home = () => {
   return (
     <>
       <Head>

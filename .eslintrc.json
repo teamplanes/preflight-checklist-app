@@ -1,5 +1,5 @@
 {
-  "extends": "eslint-config-planes",
+  "extends": "eslint-config-planes/js/react",
   "rules": {
     "react/react-in-jsx-scope": "off"
   }
