@@ -32,8 +32,9 @@ can be sure to get the most from the session.
 - No need to push/host your code after the call
 - You won't be doing any actual UI/CSS/Styling, it'll mostly be logic based (so
   think hooks, props, map, etc).
-- We will be working with TypeScript but if you've not worked with it before no
-  problem at all you'll be guided through the syntax
+- The `main` branch of this project has the TypeScript version of the project,
+  however you can checkout into the `javascript` branch if you'd prefer to work
+  with that - you won't be marked down if you do!
 
 ---
 ✈️ / [planes.studio](https://planes.studio)
