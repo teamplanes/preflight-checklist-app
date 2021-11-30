@@ -39,7 +39,8 @@ const TaskListItem: React.FC<TaskListItemProps> = (props) => {
       <ButtonGroup size="sm" isAttached variant="outline">
         <IconButton
           mr="-px"
-          colorScheme="primary"
+          variant="solid"
+          colorScheme="green"
           aria-label="Mark as Done"
           icon={<CheckIcon />}
         />
