@@ -20,6 +20,7 @@ can be sure to get the most from the session.
   won't be marked down if you don't have this setup!
 - Disable GitHub Copilot, if you have it installed
 - Have a look at the code but try not to make any changes
+- **Please make sure you have your browser permissions set such that you can share your screen on the call**
 
 ## What to Expect
 - Your paired engineer will be talking you through features or updates that we
