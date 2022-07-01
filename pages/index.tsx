@@ -1,4 +1,4 @@
-import type {NextPage} from 'next';
+import type {GetStaticProps, NextPage} from 'next';
 import Head from 'next/head';
 import {
   Button,
@@ -15,12 +15,12 @@ import React from 'react';
 import {CheckIcon, DeleteIcon} from '@chakra-ui/icons';
 import {datatype, lorem, date} from 'faker';
 
-const INITIAL_TASKS = Array.from({length: 10}, () => ({
-  id: datatype.uuid(),
-  title: lorem.sentence(),
-  date: date.past(),
-  done: datatype.boolean(),
-}));
+interface Task {
+  id: string;
+  title: string;
+  date: number; // time in milliseconds
+  done: boolean;
+}
 
 interface TaskListItemProps {
   title: string;
@@ -73,7 +73,7 @@ const AddTaskField: React.FC<AddTaskFieldProps> = () => {
   );
 };
 
-const Home: NextPage = () => {
+const Home: NextPage<{initialTasks: Task[]}> = ({initialTasks}) => {
   return (
     <>
       <Head>
@@ -86,11 +86,24 @@ const Home: NextPage = () => {
           </Flex>
           <AddTaskField />
           <Divider my={4} />
-          <TaskListItem title={INITIAL_TASKS[0].title} />
+          <TaskListItem title={initialTasks[0].title} />
         </Container>
       </Flex>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = () => {
+  return {
+    props: {
+      initialTasks: Array.from<unknown, Task>({length: 10}, () => ({
+        id: datatype.uuid(),
+        title: lorem.sentence(),
+        date: date.past().getTime(),
+        done: datatype.boolean(),
+      })),
+    },
+  };
 };
 
 export default Home;
