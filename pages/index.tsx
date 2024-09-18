@@ -1,5 +1,5 @@
-import type {GetStaticProps, NextPage} from 'next';
-import Head from 'next/head';
+import type { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import {
   Button,
   ButtonGroup,
@@ -10,10 +10,10 @@ import {
   InputGroup,
   InputRightElement,
   Divider,
-} from '@chakra-ui/react';
-import React from 'react';
-import {CheckIcon, DeleteIcon} from '@chakra-ui/icons';
-import {datatype, lorem, date} from 'faker';
+} from "@chakra-ui/react";
+import React from "react";
+import { CheckIcon, DeleteIcon } from "@chakra-ui/icons";
+import { faker } from "@faker-js/faker";
 
 interface Task {
   id: string;
@@ -50,17 +50,9 @@ const TaskListItem: React.FC<TaskListItemProps> = (props) => {
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface AddTaskFieldProps {
-  // TODO
-}
-
-const AddTaskField: React.FC<AddTaskFieldProps> = () => {
-  const handleSubmit: React.FormEventHandler<HTMLDivElement> = (e) => {
-    e.preventDefault();
-  };
+const AddTaskField: React.FC = () => {
   return (
-    <Flex as="form" onSubmit={handleSubmit} layerStyle="card">
+    <Flex as="form" layerStyle="card">
       <InputGroup size="md">
         <Input pr="4.5rem" placeholder="Add task..." />
         <InputRightElement width="4.5rem">
@@ -73,7 +65,7 @@ const AddTaskField: React.FC<AddTaskFieldProps> = () => {
   );
 };
 
-const Home: NextPage<{initialTasks: Task[]}> = ({initialTasks}) => {
+const Home: NextPage<{ initialTasks: Task[] }> = ({ initialTasks }) => {
   return (
     <>
       <Head>
@@ -96,11 +88,11 @@ const Home: NextPage<{initialTasks: Task[]}> = ({initialTasks}) => {
 export const getStaticProps: GetStaticProps = () => {
   return {
     props: {
-      initialTasks: Array.from<unknown, Task>({length: 10}, () => ({
-        id: datatype.uuid(),
-        title: lorem.sentence(),
-        date: date.past().getTime(),
-        done: datatype.boolean(),
+      initialTasks: Array.from<unknown, Task>({ length: 10 }, () => ({
+        id: faker.string.uuid(),
+        title: faker.lorem.sentence(),
+        date: faker.date.past().getTime(),
+        done: faker.datatype.boolean(),
       })),
     },
   };
