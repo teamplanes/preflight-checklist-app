@@ -5,7 +5,7 @@ engineering challenge.
 
 During the hour-long challenge you'll be pair programming with a member of the
 Planes engineering team, both collaborating to develop the project into a
-working app! We ask the candidate to "drive" (sharing your screen) and your
+working app! We'll ask you to "drive" (sharing your screen) and your
 paired engineer will walk you through the tasks to be completed.
 
 ## Prep Work
